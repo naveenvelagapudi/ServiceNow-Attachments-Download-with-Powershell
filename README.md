@@ -1,7 +1,6 @@
 # ServiceNow-Attachments-Download-with-Powershell
 Download ServiceNow Attachments using powershell (Internally uses Aggregate API , Attachment API &amp; Table API )
-# ServiceNow_Attachment_Download_Powershell
-Download ServiceNow Attachments using powershell (Internally uses Aggregate API , Attachment API &amp; Table API )
+
 
 ## Pre execution steps - Update below variables with relevant details
 * ***$userName*** with User id of servicenow user record
