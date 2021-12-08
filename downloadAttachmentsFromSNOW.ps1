@@ -106,6 +106,11 @@ $aggBody = @{
 sysparm_count=$true
 }
 
+#append encoded query if exists
+if($tableFilters[$table] -and ($tableFilters[$table] -ne $null)){
+$aggBody.sysparm_query = $tableFilters[$table]	
+}
+
 $aggUrl = $instanceUrl + "/api/now/stats/" + $table;
 
 
