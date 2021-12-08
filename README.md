@@ -10,6 +10,7 @@ Download ServiceNow Attachments using powershell (Internally uses Aggregate API 
 * ***$baseFolderPath*** with initial folder where we need to create subfolder , by default that folder should exist
 * ***$tables*** with list of table names for attachments need to be retrieved
 * ***$relativeTablePath*** with table and its relevant subdirectory names, script will automatically create if folder doesnt exist
+* ***$tableFilters*** with encoded queries to be applied on tables
 
 ## Known issues
 * Exception handling is not yet implemented 
