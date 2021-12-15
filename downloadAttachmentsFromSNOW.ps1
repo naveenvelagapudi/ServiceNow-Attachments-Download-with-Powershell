@@ -188,7 +188,11 @@ Get-Dircreated -folderPath $folderPath
 $newFileName = Get-NewFileName -suffix $recordResp.number -fileName $attachMetaResp.file_name;
 $filePath = Join-Path $folderPath $newFileName;
 
+if(!(Test-Path $filePath)){
 Invoke-RestMethod -Uri $attachContentUrl -Method $method -Headers $attachContentHeaders -OutFile $filePath ;
+}else{
+Logger -message("Error: file already exists :: "+ $filePath );
+}
 
 Logger -message ("File Downloaded successfully , New file name :: "+$newFileName  + " Path to file :: "+$filePath);
 
